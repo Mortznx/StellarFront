@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="301.0" styleClass="Doctor" stylesheets="@Hospital.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iranhospital._AddnewPatient">
+   <children>
+      <Label layoutX="14.0" layoutY="71.0" text="First Name :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="14.0" text="Add new Patient" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="120.0" text="Last Name :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="168.0" text="ID :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtFirstName" layoutX="128.0" layoutY="69.0" />
+      <TextField fx:id="TxtLastName" layoutX="128.0" layoutY="117.1" />
+      <TextField fx:id="TxtID" layoutX="128.0" layoutY="165.1" />
+      <Button fx:id="BtnRegistration" layoutX="111.0" layoutY="620.0" mnemonicParsing="false" onAction="#BtnRegistration" styleClass="Laboratory" stylesheets="@Hospital.css" text="Registration" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="18.0" layoutY="216.0" text="Father Name :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="264.0" text="Gender :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="312.0" text="Birthday :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="360.0" text="Location :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="408.0" text="Phone :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="456.0" text="Companion :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="504.0" text="Companion Phone :" textFill="WHITE" />
+      <Label layoutX="12.0" layoutY="553.0" text="Arrival Date :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtFatherName" layoutX="128.0" layoutY="213.3" />
+      <SplitMenuButton fx:id="SplitGender" layoutX="128.0" layoutY="261.4" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0">
+        <items>
+          <MenuItem fx:id="GenderMale" mnemonicParsing="false" onAction="#GenderMale" text="Male" />
+          <MenuItem fx:id="GenderFemale" mnemonicParsing="false" onAction="#GenderFemale" text="Female" />
+        </items>
+      </SplitMenuButton>
+      <TextField fx:id="TxtBirthdayYear" layoutX="128.0" layoutY="309.1" prefHeight="25.0" prefWidth="47.0" />
+      <TextField fx:id="TxtBirthdayMonth" layoutX="179.0" layoutY="309.1" prefHeight="25.0" prefWidth="47.0" />
+      <TextField fx:id="TxtBirthdayDay" layoutX="230.0" layoutY="309.0" prefHeight="25.0" prefWidth="47.0" />
+      <TextField fx:id="TxtLocation" layoutX="128.0" layoutY="357.6" />
+      <TextField fx:id="TxtPhone" layoutX="128.0" layoutY="405.7" />
+      <TextField fx:id="TxtCompanion" layoutX="128.0" layoutY="453.8" />
+      <TextField fx:id="TxtCompanionPhone" layoutX="128.0" layoutY="501.9" />
+      <TextField fx:id="TxtArrivalDate" layoutX="128.0" layoutY="550.0" />
+      <Button fx:id="BtnExit" layoutX="254.0" layoutY="-30.0" mnemonicParsing="false" onAction="#BtnExit" prefHeight="67.0" prefWidth="33.0" styleClass="Doctor" stylesheets="@Hospital.css" />
+      <ImageView disable="true" fitHeight="61.0" fitWidth="33.0" layoutX="257.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Exit.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="818.0" styleClass="Doctor" stylesheets="@Hospital.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iranhospital._Patients">
+   <children>
+      <Label layoutX="14.0" layoutY="6.0" text="Visit" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Refresh" layoutX="732.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="67.0" prefWidth="33.0" styleClass="Doctor" stylesheets="@Hospital.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView disable="true" fitHeight="26.0" fitWidth="24.0" layoutX="737.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@refresh.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Exit" layoutX="775.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Exit" prefHeight="67.0" prefWidth="33.0" styleClass="Doctor" stylesheets="@Hospital.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView disable="true" fitHeight="61.0" fitWidth="33.0" layoutX="777.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Exit.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="BtnAdd" layoutX="445.0" layoutY="342.0" mnemonicParsing="false" onAction="#BtnAdd" prefHeight="67.0" prefWidth="101.0" styleClass="Laboratory" stylesheets="@Hospital.css" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="MedicalRecord" layoutX="14.0" layoutY="140.0" prefHeight="421.0" prefWidth="242.0" stylesheets="@Hospital.css" />
+      <Label layoutX="25.0" layoutY="105.0" text="Medical record" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="PatientProfile" layoutX="296.0" layoutY="81.0" prefHeight="225.0" prefWidth="499.0" stylesheets="@Hospital.css" />
+      <Button fx:id="BtnNext" layoutX="320.0" layoutY="342.0" mnemonicParsing="false" onAction="#BtnNext" prefHeight="67.0" prefWidth="101.0" styleClass="Laboratory" stylesheets="@Hospital.css" text="Next" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label fx:id="TotalPrice" layoutX="421.0" layoutY="362.0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="54.0" text="Patient Profile :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <SplitMenuButton fx:id="SplitTransfer" layoutX="415.0" layoutY="454.0" mnemonicParsing="false" onAction="#SplitTransfer" prefHeight="30.0" prefWidth="261.0" text="Transfer to another department">
+        <items>
+          <MenuItem fx:id="BtnICU" mnemonicParsing="false" onAction="#BtnICU" text="ICU" />
+          <MenuItem fx:id="BtnCCU" mnemonicParsing="false" onAction="#BtnCCU" text="CCU" />
+            <MenuItem fx:id="BtnPICU" mnemonicParsing="false" onAction="#BtnPICU" text="PICU" />
+            <MenuItem fx:id="BtnNICU" mnemonicParsing="false" onAction="#BtnNICU" text="NICU" />
+            <MenuItem fx:id="BtnEmergency" mnemonicParsing="false" onAction="#BtnEmergency" text="Emergency" />
+            <MenuItem fx:id="BtnGynecologyAndObstetrics" mnemonicParsing="false" onAction="#BtnGynecologyAndObstetrics" text="Gynecology And Obstetrics" />
+            <MenuItem fx:id="BtnINFECTIOUS" mnemonicParsing="false" onAction="#BtnINFECTIOUS" text="INFECTIOUS" />
+            <MenuItem fx:id="BtnINTERNAL" mnemonicParsing="false" onAction="#BtnINTERNAL" text="INTERNAL" />
+            <MenuItem fx:id="BtnOROLOGY" mnemonicParsing="false" onAction="#BtnOROLOGY" text="OROLOGY" />
+        </items>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </SplitMenuButton>
+      <Button fx:id="BtnTransferToTheOperatingRoom" layoutX="692.0" layoutY="342.0" mnemonicParsing="false" onAction="#BtnTransferToTheOperatingRoom" prefHeight="67.0" prefWidth="114.0" styleClass="Laboratory" stylesheets="@Hospital.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="22.0" />
+         </font>
+         <graphic>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="operating room" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="Transfer to the" textFill="WHITE" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </graphic>
+      </Button>
+      <Button fx:id="BtnTextRequest" layoutX="568.0" layoutY="342.0" mnemonicParsing="false" onAction="#BtnTextRequest" prefHeight="67.0" prefWidth="114.0" styleClass="Laboratory" stylesheets="@Hospital.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Request" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Text" textFill="WHITE" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </graphic>
+      </Button>
+      <Button fx:id="BtnPatientDischargeRequest" layoutX="415.0" layoutY="528.0" mnemonicParsing="false" onAction="#BtnPatientDischargeRequest" prefHeight="67.0" prefWidth="261.0" styleClass="Laboratory" stylesheets="@Hospital.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="22.0" />
+         </font>
+         <graphic>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="discharge request" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Patient" textFill="WHITE" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
